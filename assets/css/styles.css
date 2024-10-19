@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    text-align: center; /* Centrar texto horizontalmente en todo el body */
+}
+
+
+
+  
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+  
+.content {
+    z-index: 1;
+    position: relative;
+    text-align: center; /* Asegúrate de que el texto esté centrado aquí también */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Alinea los elementos al centro */
+    justify-content: center; /* Alinea los elementos verticalmente al centro */
+    height: 100vh; /* Asegúrate de que ocupe toda la altura de la ventana */
+}
+  
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+    animation: glow 2s infinite alternate;
+}
+  
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #f9f, 0 0 20px #f9f, 0 0 30px #f9f, 0 0 40px #f9f;
+    }
+    to {
+      text-shadow: 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #ff0, 0 0 50px #ff0;
+    }
+}
+  
+#birthdayMessage {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+  
+#continueButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #f9f;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s;
+}
+  
+#continueButton:hover {
+    background-color: #ff0;
+}
+  
+#poemContainer {
+    display: none;
+    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: flex-start; /* Alinea el contenido al principio */
+    align-items: center;
+    height: auto; /* Ajusta según lo necesites */
+    overflow: hidden; /* Oculta el contenido que excede el contenedor */
+    padding: 10px; /* Puedes eliminar o ajustar esto si deseas menos espacio */
+    background: transparent; /* Asegúrate de que el fondo sea transparente */
+    border: none; /* Eliminar borde */
+    gap: 20px; /* Aumenta este valor para más espacio entre todos los elementos */
+}
+
+#poemTitle {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Aumenta este valor para más espacio */
+
+}
+
+#poemText {
+    display: flex;
+    align-items: flex-end; /* Alinear el texto al fondo del contenedor */
+    justify-content: center; /* Alinear el texto al inicio */
+    width: 600px; /* Ancho fijo */
+    height: 150px; /* Alto fijo */
+    max-height: 150px; /* Establece un máximo para la altura */
+    overflow: hidden; /* Oculta el texto que se desborda */
+    margin: 0; /* Elimina márgenes */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Suavidad al desplazamiento y opacidad */
+    color: white; /* Cambia el color del texto si es necesario */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    line-height: 1.2; /* Espaciado entre líneas */
+    position: relative; /* Para posicionar los elementos hijos */
+}
+
+/* Clase para el efecto de desvanecimiento */
+.fade-out {
+    opacity: 0; /* Desvanecimiento completo */
+    transform: translateY(-10px); /* Mueve el texto hacia arriba */
+}
+
+#extraButtons {
+    display: none;
+    margin-top: 40px; /* Espacio adicional entre los botones */
+}
+  
+.extra-btn {
+    padding: 15px 20px;
+    font-size: 1.5rem;
+    margin: 10px; /* Espaciado uniforme entre botones */
+    cursor: pointer;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s;
+}
+  
+.extra-btn:hover {
+    background-color: #45a049;
+}
+  
+#finalButton {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #ff0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centrando el botón */
+}
+  
+#finalButton:hover {
+    background-color: #f9f;
+}
+  
+#finalMessage h1 {
+    font-size: 3rem;
+    color: #f00;
+    margin-top: 40px;
+}
+  
+#finalMessage p {
+    font-size: 2rem;
+    margin-top: 20px;
+}
